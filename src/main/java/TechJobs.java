@@ -119,8 +119,6 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-
         for (HashMap<String, String> job : someJobs) {
             System.out.println();
             System.out.println("*****");
@@ -131,14 +129,9 @@ public class TechJobs {
             System.out.println("core competency: " + job.get("core competency"));
             System.out.println("*****");
         }
-        //match found format
-//        System.out.println("printJobs is not implemented yet");
-//
-//
-//        //no results format
-//        System.out.println("Search term:");
-//        System.out.println("Example Search Term with No Results");
-//        System.out.println("No Results");
-        
+
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        }
     }
 }
